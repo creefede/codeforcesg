@@ -9,7 +9,7 @@ using namespace std;
 typedef long long ll;
 typedef double ld;
 typedef vector<int> vi;
-
+//Terminar
 int main(){
   ll n;
   cin>>n;
@@ -21,7 +21,7 @@ int main(){
   int count = 0;
 
   for(auto const& pair : hola){
-    if(pair.fi!='7'||pair.fi!='4'){
+    if(pair.fi!=7||pair.fi!=4){
       cout<<"NO\n";
       break;
     }

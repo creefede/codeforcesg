@@ -1,2 +1,2 @@
 # codeforcesg
-Mis problemas de codeforces
+Los problemas de codeforces resueltos por los integrantes de The Codefather

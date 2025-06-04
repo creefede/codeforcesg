@@ -3,32 +3,30 @@
 #define fi first
 #define se second
 #define pb push_back
+#define el '\n'
 
 using namespace std;
 
 typedef long long ll;
 typedef double ld;
 typedef vector<int> vi;
-//Terminar
+typedef vector<ll> vll;
+typedef vector<ld> vd;
+
 int main(){
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL); cout.tie(NULL);
   ll n;
   cin>>n;
-  string s = to_string(n);
-  unordered_map<char,int> hola;
-  for(int i=0;i<s.size();++i){
-    hola[s[i]] = hola[s[i]] + 1;
-  }
   int count = 0;
-
-  for(auto const& pair : hola){
-    if(pair.fi!=7||pair.fi!=4){
-      cout<<"NO\n";
-      break;
-    }
-    count++;
+  string s = to_string(n);
+  for(int i=0;i<s.size();++i){
+    if(s[i]=='4'||s[i]=='7')count++;
   }
-  if(count==4||count==7){
-    cout<<"YES\n";
+  if(count==7||count==4){
+    cout<<"YES"<<el;
+  }else{
+    cout<<"NO"<<el;
   }
   return 0;
 }

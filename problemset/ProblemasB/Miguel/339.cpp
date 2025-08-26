@@ -29,6 +29,7 @@ int main(){
     i=a;
     m--;
   }
+  
   /*
   while(m>0){
     cin>>a;  

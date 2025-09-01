@@ -23,5 +23,19 @@ typedef vector<ld> vd;
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  int t;
+  cin>>t;
+  forn(i,t){
+    int a,b,c;
+    cin>>a>>b>>c;
+    if(a==b){
+      cout<<c<<el;
+    }else if(a==c){
+      cout<<b<<el;
+    }else{
+      cout<<a<<el;
+    }
+  }
+  return 0;
 }
+

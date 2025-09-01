@@ -23,5 +23,15 @@ typedef vector<ld> vd;
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  int t;
+  cin>>t;
+  forn(i,t){
+    string a;
+    cin>>a;
+    int uno = a[0] - '0';
+    int dos = a[2] - '0';
+    cout<<uno+dos<<el;
+  }
+  return 0;
 }
+

@@ -8,6 +8,9 @@
 #define el '\n'
 #define sz(v) int(v.size())
 #define all(v) v.begin(),v.end()
+#define fa(x) bool x=false
+#define msg(x) cout << (x) << el
+#define bug(x) cout << (#x) << ": " << (x) << el
 
 using namespace std;
 

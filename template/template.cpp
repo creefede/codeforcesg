@@ -4,10 +4,12 @@
 #define se second
 #define forn(i,n) for(int i=0;i< (int)n; ++i)
 #define foraut(p,m) for(auto &p : m)
+#define forc(c,s) for(char c: s)
 #define pb push_back
 #define el '\n'
 #define sz(v) int(v.size())
 #define all(v) v.begin(),v.end()
+#define tc int t; cin >> t; while(t--)
 #define fa(x) bool x=false
 #define msg(x) cout << (x) << el
 #define bug(x) cout << (#x) << ": " << (x) << el

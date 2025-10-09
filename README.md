@@ -1,2 +1,2 @@
-# codeforcesg
-Los problemas de codeforces resueltos por los integrantes de The Codefather
+# Programación Competitiva The CodeFather
+Los problemas de programación competitiva resueltos por los integrantes de The Codefather

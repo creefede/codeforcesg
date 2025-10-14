@@ -32,5 +32,22 @@ typedef unordered_map<string,int> ums;
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  int n;
+  cin>>n;
+  ums hola;
+  forn(i,n){
+    string s;
+    cin>>s;
+    hola[s] = hola[s] + 1;
+  }
+  int maxi = 0;
+  string team = "";
+  for(const auto& pair : hola){
+    if(maxi<pair.se){
+      maxi = pair.se;
+      team = pair.fi;
+    }
+  }
+  msg(team);
+  return 0;
 }

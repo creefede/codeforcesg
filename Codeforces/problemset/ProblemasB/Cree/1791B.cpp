@@ -27,10 +27,38 @@ typedef vector<ll> vll;
 typedef vector<ld> vd;
 typedef unordered_map<int,int> umi;
 typedef unordered_map<char,int> umc;
-typedef unordered_map<string,int> ums;
 
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  int t;
+  cin>>t;
+  while(t--){
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int x=0,y=0;
+    bool yes = false;
+    forn(i,n){
+      if(s[i]=='R'){
+        x++;
+      }else if(s[i]=='L'){
+        x--;
+      }else if(s[i]=='U'){
+        y++;
+      }else if(s[i]=='D'){
+        y--;
+      }
+      if(x==1&&y==1){
+        msg("YES");
+        yes = true;
+        break;
+      }
+    }
+    if(!yes){
+      msg("NO");
+    }
+  }
+  return 0;
 }

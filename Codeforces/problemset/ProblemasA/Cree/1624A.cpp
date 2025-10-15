@@ -34,5 +34,19 @@ const int inf = 1e9;
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  tc{
+    int n;
+    cin>>n;
+    vi a(n);
+    int maxi = -1;
+    int mini = inf;
+    forn(i,n){
+      cin>>a[i];
+      maxi = max(maxi,a[i]);
+      mini = min(mini,a[i]);
+    }
+    msg(maxi-mini);
+  }
+  return 0;
 }
+

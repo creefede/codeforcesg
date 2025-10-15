@@ -27,12 +27,32 @@ typedef vector<ll> vll;
 typedef vector<ld> vd;
 typedef unordered_map<int,int> umi;
 typedef unordered_map<char,int> umc;
-typedef unordered_map<string,int> ums;
-
-const int inf = 1e9;
 
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  string s;
+  cin>>s;
+  forn(i,sz(s)-2){
+    if(s[i]=='W'&&s[i+1]=='U'&&s[i+2]=='B'){
+      s[i] = '*';
+      s[i+1] = '*';
+      s[i+2] = '*';
+    }
+  }
+  string nueva = "";
+  bool dentro = false;
+  forn(i,sz(s)){
+    if(s[i]=='*'){
+      if(dentro){
+        nueva += ' ';
+        dentro = false;
+      }
+    }else{
+      nueva += s[i];
+      dentro = true;
+    }
+  }
+  msg(nueva);
+  return 0;
 }

@@ -34,5 +34,19 @@ const int inf = 1e9;
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  tc{
+    string a;
+    cin>>a;
+    if(a[0]=='a'){
+      d("YES");
+    }else if(a[1]=='b'){
+      d("YES");
+    }else if(a[2]=='c'){
+      d("YES");
+    }else{
+      d("NO");
+    }
+  }
+  return 0;
 }
+

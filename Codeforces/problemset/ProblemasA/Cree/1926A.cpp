@@ -34,5 +34,18 @@ const int inf = 1e9;
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  tc{
+    string s;
+    cin>>s;
+    int counta = 0, countb = 0;
+    for(char c : s){
+      if(c=='A')counta++;
+      else{countb++;}
+    }
+    if(counta>countb)d("A");else{
+      d("B");
+    }
+  }
+  return 0;
 }
+

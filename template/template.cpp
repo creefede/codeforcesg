@@ -3,6 +3,8 @@
 #define fi first
 #define se second
 #define forn(i,n) for(int i=0;i< (int)n; ++i)
+#define fore(i,l,r) for(int i=(int)l; i<= (int)r; ++i)
+#define ford(i,n) for(int i=(int)(n) - 1; i>= 0; --i)
 #define foraut(p,m) for(auto &p : m)
 #define forc(c,s) for(char c: s)
 #define pb push_back

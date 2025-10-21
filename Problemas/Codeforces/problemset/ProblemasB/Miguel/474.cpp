@@ -3,6 +3,8 @@
 #define fi first
 #define se second
 #define forn(i,n) for(int i=0;i< (int)n; ++i)
+#define fore(i,l,r) for(int i=(int)l; i<= (int)r; ++i)
+#define ford(i,n) for(int i=(int)(n) - 1; i>= 0; --i)
 #define foraut(p,m) for(auto &p : m)
 #define forc(c,s) for(char c: s)
 #define pb push_back
@@ -11,7 +13,7 @@
 #define all(v) v.begin(),v.end()
 #define tc int t; cin >> t; while(t--)
 #define fa(x) bool x=false
-#define msg(x) cout << (x) << el
+#define d(x) cout << (x) << el
 #define bug(x) cout << (#x) << ": " << (x) << el
 
 using namespace std;
@@ -27,22 +29,26 @@ typedef vector<ll> vll;
 typedef vector<ld> vd;
 typedef unordered_map<int,int> umi;
 typedef unordered_map<char,int> umc;
+typedef unordered_map<string,int> ums;
+
+const int inf = 1e9;
+
+int solve(vi &arr, ll q, int n){
+    int ans=lower_bound(all(arr),q)-arr.begin();
+    return ans;
+}
 
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
   int n;cin>>n;
-  vi nums(n);
-  vi vals(n+1);
-  vals[0]=0;
+  vi pile(n);
   int i=1;
-  while(i<n+1){cin>>nums[i-1];vals[i]=nums[i-1]+vals[i-1];i++;}
-  int m; cin>>m;
-  vi pos(m);
-  forn(j,m)cin>>pos[j];
-  forn(k,m){
-    int q=0;
-    while(pos[k]<=vals[q]||pos[k]>vals[q+1]) q++;
-    msg(q+1);
+  cin>>pile[0];
+  while(i<n){ll a; cin>>a;pile[i]=pile[i-1]+a;i++;}
+  int m;cin>>m;
+  forn(j,m){
+    ll q;cin>>q;
+    d(solve(pile,q,n)+1);
   }
 }

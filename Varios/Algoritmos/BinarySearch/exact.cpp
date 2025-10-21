@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 //find if an exact value is present in a vector
@@ -30,5 +31,12 @@ int main() {
     int result = binarySearch(arr, x);
     if(result == -1) cout << "Element is not present in array";
     else cout << "Element is present at index " << result;
+    cout<<endl;
+    //--------------------------------------------------------------
+    // THE COMPLEATE RETURNS THE INDEX THE SIMPLE ONLY RETURNS A BOOL
+    bool count = binary_search(arr.begin(), arr.end(), x);
+    if(count) cout<<"found";
+    else cout<<"not found";
+
     return 0;
 }

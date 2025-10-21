@@ -23,8 +23,7 @@ int main() {
     vector<int> arr = { 2, 3, 4, 10, 40 };
     int x = 10;
     int result = upperBound(arr, x);
-    cout<<result;
-    cout<<endl;
+    cout<<result<<endl;
     //--------------------------------------------------------------
     // THEY BOTH WORK THE SAME
     int count = upper_bound(arr.begin(), arr.end(), x) - arr.begin();

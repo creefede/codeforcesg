@@ -1,17 +1,23 @@
 #include <bits/stdc++.h>
- 
+
 #define fi first
 #define se second
 #define forn(i,n) for(int i=0;i< (int)n; ++i)
+#define fore(i,l,r) for(int i=(int)l; i<= (int)r; ++i)
+#define ford(i,n) for(int i=(int)(n) - 1; i>= 0; --i)
 #define foraut(p,m) for(auto &p : m)
-#define whi(i,n) while(int i=0 < n)
+#define forc(c,s) for(char c: s)
 #define pb push_back
 #define el '\n'
 #define sz(v) int(v.size())
 #define all(v) v.begin(),v.end()
- 
+#define tc int t; cin >> t; while(t--)
+#define fa(x) bool x=false
+#define d(x) cout << (x) << el
+#define bug(x) cout << (#x) << ": " << (x) << el
+
 using namespace std;
- 
+
 typedef long long ll;
 typedef double ld;
 typedef pair<int,int> ii;
@@ -23,29 +29,27 @@ typedef vector<ll> vll;
 typedef vector<ld> vd;
 typedef unordered_map<int,int> umi;
 typedef unordered_map<char,int> umc;
- 
-int main(){
+typedef unordered_map<string,int> ums;
+#define long long int;
+const int inf = 1e9;
+
+int32_t main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-  ll n, t; cin>>n>>t;
-  int i =0;
-  vll nums(n);
-  while(i<n){
-    cin>>nums[i];
-    i++;
-  }int sum=0, maxi=1;i=0;
-  while(i<n-1){
-    sum = nums[i];
-    int cont=1;
-    int j=i+1;
-    while(j<n){
-        if(nums[j]+sum<=t){sum+=nums[j];cont++;}
-        else break;
-        j++;
+  int n,t;cin>>n>>t;
+  vi nums(n);
+  forn(i,n)cin>>nums[i];
+
+  int r=0;
+  int sum=0;
+  int ans=0;
+  forn(j,n){
+    while(r<n&&sum+nums[r]<=t){
+      sum+=nums[r];
+      r++;
     }
-    maxi=max(maxi,cont);
-    i++;
-  }if(n==1){if(nums[0]>t){maxi=0;}}
-  cout<<maxi;
+    ans=max(ans,r-j);
+    sum-=nums[j];
+  }d(ans);
+  return 0;
 }
-//ODIO Time limit exceeded :(

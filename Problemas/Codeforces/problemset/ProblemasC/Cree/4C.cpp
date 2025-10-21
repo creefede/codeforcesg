@@ -3,8 +3,6 @@
 #define fi first
 #define se second
 #define forn(i,n) for(int i=0;i< (int)n; ++i)
-#define fore(i,l,r) for(int i=(int)l; i<= (int)r; ++i)
-#define ford(i,n) for(int i=(int)(n) - 1; i>= 0; --i)
 #define foraut(p,m) for(auto &p : m)
 #define forc(c,s) for(char c: s)
 #define pb push_back
@@ -32,10 +30,38 @@ typedef unordered_map<char,int> umc;
 typedef unordered_map<string,int> ums;
 
 const int inf = 1e9;
-const ld pi = acos(-1);
 
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
+  int n;
+  cin>>n;
+  ums hola;
+  forn(z,n){
+    string s;
+    cin>>s;
+    if(hola[s]==0){
+      hola[s]=1;
+      d("OK");
+    }else{
+      int i = 1;
+      while(true){
+        string nuevo = s; 
+        string h = to_string(i);
+        for(char c : h){
+          nuevo.pb(c);
+        }
+        if(hola[nuevo]!=0){
+          i++;
+        }else if(hola[nuevo]==0){
+          hola[nuevo]=1;
+          d(nuevo);
+          break;
+        }
+      }
+    }
 
+  }
+  return 0;
 }
+

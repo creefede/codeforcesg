@@ -32,6 +32,7 @@ typedef unordered_map<char,int> umc;
 typedef unordered_map<string,int> ums;
 
 const int inf = 1e9;
+const int nax = 1e5+200;
 const ld pi = acos(-1);
 
 int main(){

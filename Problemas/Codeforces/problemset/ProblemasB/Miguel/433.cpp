@@ -38,13 +38,26 @@ const ld pi = acos(-1);
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-  int m;cin>>m;
-  string s;cin>>s;
-  if(s=="0")cout<<-1<<' '<<-1;
-  else{
-    int t=s.size();
-    int q=stoi(s);
-    if(t>m)cout<<-1<<' '<<-1;
-    else if(t==m)cout<<-1<<' '<<-1;
+  ll n;cin>>n;
+  vll des;
+  vll ord;
+  forn(i,n){ll a;cin>>a;des.pb(a);ord.pb(a);}
+  sort(all(ord));
+  ll m;cin>>m;
+  vll dpd(n+1);
+  vll dpo(n+1);
+  dpd[0]=0;dpo[0]=0;
+  forn(k,n){
+    dpd[k+1]=dpd[k]+des[k];
+    dpo[k+1]=dpo[k]+ord[k];
+  }
+  forn(j,m){
+    ll t,l,r;cin>>t>>l>>r;
+    if(t==1){
+      d((dpd[r]-dpd[l-1]));
+    }
+    else if(t==2){
+      d((dpo[r]-dpo[l-1]));
+    }
   }
 }

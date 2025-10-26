@@ -38,13 +38,10 @@ const ld pi = acos(-1);
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-  int m;cin>>m;
-  string s;cin>>s;
-  if(s=="0")cout<<-1<<' '<<-1;
-  else{
-    int t=s.size();
-    int q=stoi(s);
-    if(t>m)cout<<-1<<' '<<-1;
-    else if(t==m)cout<<-1<<' '<<-1;
-  }
+  int n;cin>>n;
+  if(n==0)d(1);
+  else if(n%4==0)d(6);
+  else if(n%4==1)d(8);
+  else if(n%4==2)d(4);
+  else if(n%4==3)d(2);
 }

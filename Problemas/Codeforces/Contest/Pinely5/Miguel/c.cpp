@@ -39,7 +39,28 @@ int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
   tc{
-    int a,b;cin>>a>>b;
-    cout<<min(a,b)<<" "<<max(a,b)<<el;
+    ll n,x;cin>>n>>x;
+    vi nums(n);
+    forn(i,n)cin>>nums[i];
+    sort(all(nums));
+    ll j=0,k=n-1;
+    ll cont=0;
+    vi ans;
+    ll temp=0;
+    ll s=0;
+    while(j<=k){
+      temp+=nums[k];
+      while(j<k&&temp<x){
+        temp+=nums[j];
+        ans.pb(nums[j]);
+        j++;
+      }
+      if(temp>=x){cont+=nums[k];temp-=x;}
+      ans.pb(nums[k]);
+      k--;
+    }
+    d(cont);
+    forn(p,n){cout<<ans[p]<<" ";}
+    cout<<el;
   }
 }

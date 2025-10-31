@@ -39,7 +39,20 @@ int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
   tc{
-    int a,b;cin>>a>>b;
-    cout<<min(a,b)<<" "<<max(a,b)<<el;
+    int n;cin>>n;
+    vector<string> mapa(n);
+    forn(i,n)cin >> mapa[i];
+    if (n<3){d("YES");continue;}
+    fa(x);
+    forn(i, n)forn(j, n){
+      if(mapa[i][j]=='#'){
+        for(int q=j+2;q<n;++q)if(mapa[i][q]=='#'){x=true;break;}
+        for (int p=i+2;p<n;++p)if(mapa[p][j]=='#'){x=true;break;}
+        if(x) break;
+      }
+      if(x) break;
+    }
+    if(x)d("NO");
+    else d("YES");
   }
 }

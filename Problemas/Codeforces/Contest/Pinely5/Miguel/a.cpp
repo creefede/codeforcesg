@@ -39,7 +39,14 @@ int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
   tc{
-    int a,b;cin>>a>>b;
-    cout<<min(a,b)<<" "<<max(a,b)<<el;
+    int r,x,d,n;cin>>r>>x>>d>>n;
+    int cont=0;
+    string s;cin>>s;
+    forn(j,n){
+      if(s[j]=='1'){r-=d;cont++;}
+      else{
+        if(r<x){r-=d;cont++;}
+      }
+    }d(cont);
   }
 }

@@ -39,7 +39,18 @@ int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
   tc{
-    int a,b;cin>>a>>b;
-    cout<<min(a,b)<<" "<<max(a,b)<<el;
+    int n;cin>>n;
+    vi nums;
+    umi mapi;
+    forn(i,n){int a;cin>>a;nums.pb(a);mapi[a]++;}
+    int maxi= *max_element(all(nums));
+    vi dp(maxi+2,0);
+    int j=1;
+    while(j<=maxi){
+        if(j == 1) dp[j] = mapi[j];
+        else dp[j]=max(dp[j-1],dp[j-2]+mapi[j]);
+        j++;
+    }
+    d((n-dp[maxi]));
   }
 }

@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "MSYS2 UCRT64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Programacion/c++/msys2/ucrt64/include/c++/14.2.0",
+                "C:/Programacion/c++/msys2/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32",
+                "C:/Programacion/c++/msys2/ucrt64/include/c++/14.2.0/backward",
+                "C:/Programacion/c++/msys2/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include",
+                "C:/Programacion/c++/msys2/ucrt64/include",
+                "C:/Programacion/c++/msys2/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include-fixed"
+            ],
+            "defines": [],
+            "compilerPath": "C:/Programacion/c++/msys2/ucrt64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

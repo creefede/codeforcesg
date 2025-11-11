@@ -38,16 +38,18 @@ const ld pi = acos(-1);
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-  int n;
-  cin>>n;
-  ums hola;
-  forn(i,n){
+  tc{
+    int n;
+    cin>>n;
     string s;
     cin>>s;
-    hola[s]++;
-    if(hola[s]==1){
-      d("OK");
-    }else cout<<s<<hola[s]-1<<el;
+    int count = 0;
+    forn(i,n)if(s[i]=='0')count++;
+    if(count%2==0)d("BOB");
+    else{
+      if(count==1)d("BOB");
+      else d("ALICE");
+    }
   }
   return 0;
 }

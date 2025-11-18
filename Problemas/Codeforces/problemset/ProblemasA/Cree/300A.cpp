@@ -38,18 +38,47 @@ const ld pi = acos(-1);
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-  tc{
-    int n;
-    cin>>n;
-    string s;
-    cin>>s;
-    char c1 = s[n-1];
-    int count = 0;
-    forn(i,n-1){
-      if(s[i]!=c1)count++;
-    }
-    d(count);
+  int n;
+  cin>>n;
+  vi a(n);
+  int countpos=0,countneg = 0;
+  forn(i,n){
+    cin>>a[i];
+    if(a[i]>0)countpos++;
   }
+  vi neg,pos,cero;
+  if(countpos==0){
+    forn(i,n){
+      if(a[i]<0&&countneg==0){
+        neg.pb(a[i]);
+        countneg++;
+      }else if(a[i]<0&&countneg>0&&countneg<3){
+        pos.pb(a[i]);
+        countneg++;
+      }else{
+        cero.pb(a[i]);
+      }
+    }
+  }else{
+    int posi = 0;
+    forn(i,n){
+      if(a[i]<0&&countneg==0){
+        countneg++;
+        neg.pb(a[i]);
+      }else if(a[i]>0&&posi==0){
+        posi++;
+        pos.pb(a[i]);
+      }else{
+        cero.pb(a[i]);
+      }
+    }
+  }
+  cout<<1<<" ";
+  d(neg[0]);
+  cout<<sz(pos)<<" ";
+  forn(i,sz(pos))cout<<pos[i]<<" ";
+  cout<<el;
+  cout<<sz(cero)<<" ";
+  forn(i,sz(cero))cout<<cero[i]<<" ";
   return 0;
 }
-

@@ -39,5 +39,24 @@ const ld pi = acos(-1);
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  tc{
+    int n;cin>>n;
+    vi nums(n);
+    forn(i,n)cin>>nums[i];
+    sort(all(nums));
+    dv(nums);
+    ll cont=0;
+    int j=0;
+    while(j<n){
+        int q=nums[j];
+        int temp=0;
+        while(j<n&&nums[j]==q){
+            temp++;
+            j++;
+        }
+        if(temp<q)cont+=temp;
+        else cont+=(temp-q);
+    }
+    d(cont);
+  }
 }

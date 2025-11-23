@@ -13,7 +13,6 @@
 #define all(v) v.begin(),v.end()
 #define tc int t; cin >> t; while(t--)
 #define fa(x) bool x=false
-#define dv(v) forn(i,sz(v)) cout << v[i] << " \n"[i == sz(v)-1]
 #define d(x) cout << (x) << el
 #define bug(x) cout << (#x) << ": " << (x) << el
 
@@ -39,5 +38,16 @@ const ld pi = acos(-1);
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(NULL); cout.tie(NULL);
-
+  tc{
+    int n;cin>>n;
+    int mini=INT_MAX;
+    vi sec(n);
+    forn(i,n){
+        int m;cin>>m;
+        vi nums(m);
+        forn(i,n)cin>>nums[i];
+        sort(all(nums));
+        mini=min(mini,nums[0]);
+    }
+  }
 }
